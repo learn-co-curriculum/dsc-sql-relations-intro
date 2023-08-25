@@ -8,7 +8,7 @@ Now that you've learned the fundamentals of writing SQL queries, it's time to le
 
 You have already seen this image several times:
 
-![database ERD](Database-Schema.png)
+![database ERD](https://curriculum-content.s3.amazonaws.com/data-science/images/Database-Schema.png)
 
 We also previously described the idea that each table has a **primary key** (indicated in the diagram above using `*`) and many tables have one or more **foreign keys** that link records in these tables to records in other tables.
 
@@ -24,13 +24,13 @@ In addition, let's say that managers get paid every month, instead of every two 
 
 In such a situation, we would need a place to store information about all of the managers and employees. Using a spreadsheet, your storage system might look something like this:
 
-![spreadsheet with columns, name, pay, manager](spreadsheet_1.png)
+![spreadsheet with columns, name, pay, manager](https://curriculum-content.s3.amazonaws.com/data-science/images/spreadsheet_1.png)
 
 This tells you *almost* everything you need, since it would allow you to filter who is a manager and who isn't, plus the payment amounts. But it doesn't have enough information for you to be able to send notices to employees' managers, since it just says who is an employee and who is a manager, but not the relationships.
 
 One idea we might have is to add another column, so that every employee record also lists the name of their manager:
 
-![spreadsheet with four columns, name, pay, manager, manager name](spreadsheet_2.png)
+![spreadsheet with four columns, name, pay, manager, manager name](https://curriculum-content.s3.amazonaws.com/data-science/images/spreadsheet_2.png)
 
 Now we technically have all of the information we need, but we can think of a few issues:
 
@@ -44,17 +44,17 @@ If you really only had 5 total employees, it would be manageable to do this work
 
 We can use SQL to manage this information more effectively. First, we set up a managers table and an employees table with the following schemas:
 
-![managers schema](managers_schema.png)
+![managers schema](https://curriculum-content.s3.amazonaws.com/data-science/images/managers_schema.png)
 
-![employees schema](employees_schema.png)
+![employees schema](https://curriculum-content.s3.amazonaws.com/data-science/images/employees_schema.png)
 
 Both the managers table and the employees table have primary keys (indicated by the key icon here) called `id`. Then employees have a foreign key called `manager_id` that links to a record in the managers table.
 
 The same data shown above is entered in like this:
 
-![managers data](managers_data.png)
+![managers data](https://curriculum-content.s3.amazonaws.com/data-science/images/managers_data.png)
 
-![employees data](employees_data.png)
+![employees data](https://curriculum-content.s3.amazonaws.com/data-science/images/employees_data.png)
 
 Now, the issues described before are no longer issues:
 
